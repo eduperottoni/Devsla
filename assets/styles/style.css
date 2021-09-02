@@ -8,10 +8,29 @@
     src: url(../fonts/GothamBookRegular.otf)
 }
 
-body{
-    font-family: 'GothamMedium', Helvetica, 'Arial';
-    font-size:14px;
+:root{
+    --main-gray:#393c41;
+    --hover-gray:#0000000d;
+}
+
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    width:100%;
+    height:100%;
+    font-family: 'GothamMedium', Helvetica, 'Arial';
+    font-size:14px;
+    color: var(--main-gray);
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size:cover;
+    
 }
