@@ -10,6 +10,8 @@ header{
 
     position: fixed;
     top:0;
+
+    font-size: 14px;
 }
 
 header div#logo{
@@ -34,13 +36,15 @@ header img#logo-link-img{
     width: 150px;
 }
 
-header nav.menu{
+nav.menu{
     display:flex;
-    align-items: center;
-    justify-content:center;
+
+    transition: 1s;
 }
 
 header nav#menu{
+    align-items: center;
+    justify-content:center;
     width: 650px;
 }
 
@@ -48,8 +52,8 @@ header nav#other{
     flex:1;
 }
 
-header ul.list{
-    list-style-type:none;
+ul.list{
+    list-style:none;
     display: flex;
 }
 
@@ -58,22 +62,74 @@ header nav#other{
 }
 
 header ul#other-list{
-    background-color:aqua;
     position:absolute;
-    right: 50px;
+    right: 30px;
+}
+
+header div#alt-list{
+    display: flex;
 }
 
 header li.list-item{
     font-size:1.1em;
 }
 
-header li.list-item a{
-    text-decoration: none;
+li.list-item a{
     padding:8px 16px;
+}
+
+li.list-item a{
+    text-decoration: none;
     color: var(--main-gray);
     border-radius:12px;
 }
 
-header li.list-item a:hover{
+li.list-item a:hover{
     background-color:var(--hover-gray);
 }
+
+
+/*ESTILIZAÇÃO DO MENU MOBILE*/
+nav#mobile{
+    font-size: 1rem;
+    width:320px;
+    height: 100%;
+    padding: 20px;
+    position:absolute;
+    top:0;
+    right:0;
+    background-color:aqua;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+#mobile div.mobile-part{
+    width:100%;
+}
+
+nav div.mobile-part ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#mobile li.list-item{
+    padding:5px 0;
+}
+
+#mobile li.list-item a{
+    display: block;
+}
+
+
+/*MEDIA PARA ACIONAMENTO DO HEADER MOBILE*/
+@media screen and (max-width:1300px){
+    header nav#menu, header div#alt-list{
+        display:none;
+    }
+    header li.list-item a{
+        background-color: var(--hover-gray);
+    }
+}
+
