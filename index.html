@@ -10,8 +10,9 @@
     <title>Devsla</title>
   </head>
   <body>
+    <div class="bcg-img blur"></div>
     <header>
-      <div id="logo">
+      <div id="logo" class='blur'>
         <div id="logo-img">
           <a id="logo-link" href="./index.html">
             <img
@@ -22,7 +23,7 @@
           </a>
         </div>
       </div>
-      <nav id="menu" class='menu'>
+      <nav id="menu" class='menu blur'>
         <ul id="menu-list" class='list'>
           <li class="menu-list-item list-item"><a href="">Modal S</a></li>
           <li class="menu-list-item list-item"><a href="">Modal 3</a></li>
@@ -38,10 +39,11 @@
             <li class="other-list-item list-item"><a href="">Shop</a></li>
             <li class="other-list-item list-item"><a href="">Account</a></li>
           </div>
-          <li class="other-list-item list-item"><a href="">Menu</a></li>
+          <li onclick="openMenu()" id='menu-button' class="other-list-item list-item"><a href="">Menu</a></li>
         </ul>
       </nav>
     </header>
+    <div class='bcg-mobile'></div>
     <nav id="mobile" class='menu'>
       <div id="exit">
         <div id='exit-circle'>
@@ -93,5 +95,6 @@
         </a>
       </div>
     </nav>
+    <script src="./assets/scripts/script.js"></script>
   </body>
 </html>
