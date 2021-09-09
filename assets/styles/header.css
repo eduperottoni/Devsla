@@ -88,34 +88,90 @@ li.list-item a:hover{
     background-color:var(--hover-gray);
 }
 
-
 /*ESTILIZAÇÃO DO MENU MOBILE*/
-nav#mobile, div.bcg-mobile{
-    display: none;
-}
 
 nav#mobile{
-    filter:none;
+    z-index: 1;
     font-size: 1rem;
     width:320px;
     height: 100%;
     padding: 20px 20px 200px 20px;
-    position:absolute;
+    position:fixed;
     top:0;
-    right:0;
+    right:-320px;
     background-color:white;
     flex-direction: column;
     overflow-y: scroll;
+}
+
+nav#mobile.open{
+    animation: openMenu 0.6s cubic-bezier(0.54, 0.15, 0, 0.87) forwards;
+}
+
+nav#mobile.close{
+    animation: closeMenu 0.6s cubic-bezier(0.54, 0.15, 0, 0.87)  forwards;
+}
+
+@keyframes openMenu {
+    0%{
+        transform:translateX(0);
+        opacity: 0%;
+    }
+    100%{
+        transform:translateX(-320px);
+        opacity: 100%;
+    }
+}
+
+@keyframes closeMenu {
+    0%{
+        transform:translateX(-320px);
+        opacity: 100%;
+    }
+    100%{
+        transform:translateX(0);
+        opacity: 0;
+    }
 }
 
 div.bcg-mobile{
     position: absolute;
     top:0;
     left: 0;
-    z-index: 0;
+    z-index:-1;
     width: 100vw;
     height: 100%;
     background-color:#0000004d;
+}
+
+div.bcg-mobile.open{
+    animation: openBcg 0.6s ease-out forwards;
+}
+
+div.bcg-mobile.close{
+    animation: closeBcg 0.6s ease-out forwards;
+}
+
+@keyframes openBcg{
+    0%{
+        z-index:-1;
+        opacity: 0%;
+    }
+    100%{
+        z-index:0;
+        opacity: 100%;
+    }
+}
+
+@keyframes closeBcg{
+    0%{
+        z-index:0;
+        opacity: 100%;
+    }
+    100%{
+        z-index:-1;
+        opacity: 0;
+    }
 }
 
 #mobile div.mobile-part{
