@@ -28,17 +28,12 @@ header div#logo-img{
     left: 50px;
 }
 
-header a#logo-link{
-
-}
-
 header img#logo-link-img{
     width: 150px;
 }
 
 nav.menu{
     display:flex;
-
     transition: 1s;
 }
 

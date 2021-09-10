@@ -1,0 +1,28 @@
+main#main{
+    width:100%;
+    padding:100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position:fixed;
+    top:50px;
+    left:0;
+}
+
+div#main-model h3{
+    font-size: 2.75rem;
+    font-weight:normal;
+}
+
+div#main-desc p{
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-family: 'GothamBookRegular', Helvetica, 'Arial';
+}
+
+div#main-desc p a{
+    color: var(--main-gray);
+}
