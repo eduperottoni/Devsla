@@ -1,6 +1,6 @@
 main#main{
     width:100%;
-    padding:100px;
+    padding:100px 0;
 
     display: flex;
     flex-direction: column;
@@ -10,6 +10,10 @@ main#main{
     position:fixed;
     top:50px;
     left:0;
+}
+
+div#main-model, div#main-desc{
+    width: 80%;
 }
 
 div#main-model h3{
@@ -27,4 +31,13 @@ div#main-desc p{
 
 div#main-desc p a{
     color: var(--main-gray);
+}
+
+@media only screen and (max-width:350px){
+    div#main-model h3{
+        font-size: 2.5rem;
+    }
+    div#main-desc p{
+        font-size:0.85rem;
+    }
 }
