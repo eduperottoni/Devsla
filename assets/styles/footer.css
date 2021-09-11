@@ -1,0 +1,89 @@
+footer{
+    width:100%;
+    height:175px;
+    position: fixed;
+    bottom:40px;
+    left:0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer div#footer-btns{
+    width: 625px;
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+footer button.btn{
+    width: 275px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size:0.8rem;
+    padding:15px;
+    margin-bottom:5px;
+    border-radius:110px;
+    outline:none;
+    border:none;
+    font-family: "GothamBookRegular", Arial, Helvetica, Arial;
+}
+
+button.btn#footer-btn-custom{
+    background-color: var(--button-gray);
+    color: #fff;
+}
+
+button.btn#footer-btn-inventory{
+    background-color: var(--button-light-gray);
+}
+
+footer div#arrow img{
+    width: 30px;
+    animation: 2s cubic-bezier(0.65, 0.35, 0.17, 0.9) infinite arrowDown;
+}
+
+@keyframes arrowDown{
+    0%{
+        transform:translateY(0px);
+    }
+    20%{
+        transform:translateY(-5px);
+    }
+    40%{
+        transform:translateY(2px);
+    }
+    60%{
+        transform:translateY(-2px);
+    }
+    80%{
+        transform:translateY(0px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/*MEDIA PARA O FOOTER MOBILE*/
+
+@media only screen and (max-width:700px) {
+    footer div#footer-btns{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+
+        margin:0 auto;
+    }
+
+    footer button.btn{
+        width:90%;
+    }
+
+    footer button.btn{
+        margin-bottom:20px;
+    }
+
+}

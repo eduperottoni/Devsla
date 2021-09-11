@@ -11,6 +11,8 @@
 :root{
     --main-gray:#393c41;
     --hover-gray:#0000000d;
+    --button-gray:#393c41ee;
+    --button-light-gray:#ffffffa6;
 }
 
 *{

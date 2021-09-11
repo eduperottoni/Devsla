@@ -15,12 +15,14 @@ main#main{
 div#main-model h3{
     font-size: 2.75rem;
     font-weight:normal;
+    text-align:center
 }
 
 div#main-desc p{
     margin-top: 10px;
     font-size: 1.1rem;
     font-family: 'GothamBookRegular', Helvetica, 'Arial';
+    text-align:center;
 }
 
 div#main-desc p a{
